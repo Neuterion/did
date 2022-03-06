@@ -1,47 +1,88 @@
+import Link from 'next/link'
+
+import { useEffect } from 'react'
+
 import styles from '../styles/Home.module.css'
+import z from '../styles/Navbar.module.css'
 
 export default function Navbar() {
+    function openMobileMenu() {
+        const menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("hidden");
+        menu.classList.toggle("flex");
+        menu.classList.toggle("flex-col");
+    }
+
+    useEffect(() => {
+        window.addEventListener("resize", () => {
+            const menu = document.getElementById("mobile-menu");
+            if (window.innerWidth > 639 && menu.classList.contains("hidden") === false) {
+                menu.classList.toggle("hidden");
+                menu.classList.toggle("flex");
+                menu.classList.toggle("flex-col");
+            }
+        })
+    })
+
     return (
-        <nav className="flex flex-row justify-between items-center py-3 bg-yellow-200">
-            {/* pc menu */}
-            <div className={`${styles.did_normal_font} px-3 text-lg flex items-center`}>
-                <a href="home" className="px-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
-                        <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
-                    </svg>
-                </a>
-                <a href="/" className="px-4 hidden sm:flex">Lomba</a>
-                <a href="/" className="px-4 hidden sm:flex">Talkshow</a>
-                <a href="hubungi-kami" className="px-4 hidden sm:flex">Hubungi Kami</a>
-            </div>
-            <div className={styles.did_normal_font}>
-                <a href="/" className="px-5 hidden sm:flex">Daftar</a>
-            </div>
+        <>
+            <nav className={`${styles.did_normal_font} items-center py-2 bg-yellow-200 fixed w-full ${z.z_max}`}>
+                {/* pc menu */}
+                <div className={`flex justify-between px-3 text-lg items-center`}>
+                    <div className="flex">
+                        <Link href="home">
+                            <a className="px-3 mx-1 py-1 flex items-center rounded-md hover:bg-black hover:text-yellow-200 transition duration-150">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+                                </svg>
+                            </a>
+                        </Link>
+                        <Link href="/">
+                            <a className="px-3 mx-1 py-1 hidden sm:flex rounded-md hover:bg-black hover:text-yellow-200 transition duration-150">
+                                Lomba & Talkshow
+                            </a>
+                        </Link>
+                        <Link href="/">
+                            <a className="px-3 mx-1 py-1 hidden sm:flex rounded-md hover:bg-black hover:text-yellow-200 transition duration-150">
+                                Koleksi
+                            </a>
+                        </Link>
+                        <Link href="https://forms.gle/capcMNwPAD7ebwxs7">
+                            <a className="px-3 mx-1 py-1 hidden sm:flex rounded-md hover:bg-black hover:text-yellow-200 transition duration-150">
+                                Daftar
+                            </a>
+                        </Link>
+                    </div>
+                    
+                    {/* mobile menu btn */}
+                    <div className="flex sm:hidden px-2 py-1 rounded-md hover:bg-black hover:text-yellow-200 transition duration-150">
+                        <button id="mobile-menu-btn" onClick={openMobileMenu}>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" viewBox="0 0 20 20" fill="currentColor">
+                                <path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
 
-            {/* mobile menu btn */}
-            <div className="flex sm:hidden px-4">
-                <button id="mobile-menu-btn" onClick="openMobileMenu()">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
-                    </svg>
-                </button>
-            </div>
-
-            {/* mobile menu */}
-            <div className="hidden space-y-1">
-                <div>
-                    <a href="/">Lomba</a>
+                {/* mobile menu */}
+                <div id="mobile-menu" className="hidden text-lg space-y-1 pt-3">
+                    <div>
+                        <a href="/" className="ml-5 px-2 py-0.5 my-0.5 rounded-md hover:bg-black hover:text-yellow-200 transition duration-150">
+                            Lomba & Talkshow
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/" className="ml-5 px-2 py-0.5 my-0.5 rounded-md hover:bg-black hover:text-yellow-200 transition duration-150">
+                            Koleksi
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://forms.gle/capcMNwPAD7ebwxs7" className="ml-5 px-2 py-0.5 my-0.5 rounded-md hover:bg-black hover:text-yellow-200 transition duration-150">
+                            Daftar
+                        </a>
+                    </div>
                 </div>
-                <div>
-                    <a href="/">Talkshow</a>
-                </div>
-                <div>
-                    <a href="hubungi-kami">Hubungi Kami</a>
-                </div>
-                <div>
-                    <a href="/">Daftar</a>
-                </div>
-            </div>
-        </nav>
+            </nav>
+        </>
     )
 }

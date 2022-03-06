@@ -1,0 +1,5 @@
+@media max-width: 240px {
+    .h3 {
+        display: hidden;
+    }
+}
