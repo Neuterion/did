@@ -9,7 +9,7 @@ export default function Drawings() {
             <div>
                 <Image src={Img1} placeholder="blur" quality="100"></Image>
             </div>
-            <div>
+            <div className="hidden lg:flex">
                 <Image src={Img2} placeholder="blur" quality="100"></Image>
             </div>
             <div>

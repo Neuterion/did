@@ -5,3 +5,18 @@
 .did_normal_font {
   font-family: "Jost", sans-serif;
 }
+
+.img_title {
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+}
+
+.navbar {
+  /* make navbar fixed at the top */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
