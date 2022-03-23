@@ -1,37 +1,13 @@
 import Link from 'next/link'
 
-import { useEffect } from 'react'
-
 import styles from '../styles/Home.module.css'
 
 export default function Navbar() {
-    function openMobileMenu() {
-        const menu = document.getElementById("mobile-menu");
-        menu.classList.toggle("hidden");
-        menu.classList.toggle("flex");
-        menu.classList.toggle("flex-col");
-
-        const btn = document.getElementById("mobile-menu-btn");
-        btn.classList.toggle("bg-black");
-        btn.classList.toggle("text-yellow-200");
-    }
-
-    useEffect(() => {
-        window.addEventListener("resize", () => {
-            const menu = document.getElementById("mobile-menu");
-            if (window.innerWidth > 639 && menu.classList.contains("hidden") === false) {
-                menu.classList.toggle("hidden");
-                menu.classList.toggle("flex");
-                menu.classList.toggle("flex-col");
-            }
-        })
-    })
-
     return (
         <>
             <nav className={`sticky top-0 z-50 ${styles.did_normal_font} items-center py-2 bg-yellow-200 sticky`}>
                 {/* pc menu */}
-                <div className={`flex justify-between items-center px-3 text-lg 2xl:text-xl`}>
+                <div className={`flex justify-around items-center px-3 text-lg 2xl:text-xl`}>
                     <div className="flex">
                         <Link href="/">
                             <a className="flex items-center px-3 py-1 2xl:py-2 mx-1 2xl:mx-2 rounded-md hover:bg-black hover:text-yellow-200 transition duration-150">
@@ -41,38 +17,10 @@ export default function Navbar() {
                             </a>
                         </Link>
                         <Link href="/koleksi">
-                            <a className="hidden sm:flex px-3 py-1 2xl:py-2 mx-1 2xl:mx-2 rounded-md hover:bg-black hover:text-yellow-200 transition duration-150">
+                            <a className="flex px-3 py-1 2xl:py-2 mx-1 2xl:mx-2 rounded-md hover:bg-black hover:text-yellow-200 transition duration-150">
                                 Koleksi
                             </a>
                         </Link>
-                        <a href="https://forms.gle/capcMNwPAD7ebwxs7" target="_blank" className="hidden sm:flex px-3 py-1 2xl:py-2 mx-1 2xl:mx-2 rounded-md hover:bg-black hover:text-yellow-200 transition duration-150">
-                            Daftar
-                        </a>
-                    </div>
-                    
-                    {/* mobile menu btn */}
-                    <div id="mobile-menu-btn" className="flex sm:hidden px-2 py-1 rounded-md hover:bg-black hover:text-yellow-200 transition duration-150">
-                        <a onClick={openMobileMenu}>
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" viewBox="0 0 20 20" fill="currentColor">
-                                <path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                {/* mobile menu */}
-                <div id="mobile-menu" className="hidden text-lg space-y-1 pt-3">
-                    <div>
-                        <Link href="/koleksi">
-                            <a className="ml-5 px-2 py-0.5 my-0.5 rounded-md hover:bg-black hover:text-yellow-200 transition duration-150">
-                                Koleksi
-                            </a>
-                        </Link>
-                    </div>
-                    <div>
-                        <a href="https://forms.gle/capcMNwPAD7ebwxs7" className="ml-5 px-2 py-0.5 my-0.5 rounded-md hover:bg-black hover:text-yellow-200 transition duration-150">
-                            Daftar
-                        </a>
                     </div>
                 </div>
             </nav>
