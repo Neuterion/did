@@ -10,7 +10,7 @@ export default function Footer() {
           <h3 className={`mx-2 text-xs xxs:text-sm xs:text-base`}>
             Hubungi kami:
           </h3>
-          <a href="https://www.instagram.com/dcxfg115/" target="_blank" className={`py-2 px-3 mx-2 flex justify-center items-center rounded-lg bg-gray-900 hover:bg-black transition duration-150`}>
+          <a href="https://www.instagram.com/dcxfg115/" target="_blank" rel="noreferrer" className={`py-2 px-3 mx-2 flex justify-center items-center rounded-lg bg-gray-900 hover:bg-black transition duration-150`}>
             <Image src={instagram} width="30px" height="30px" alt="Instagram"></Image>
             <h3 className={`px-2 text-xs xxs:text-sm xs:text-base`}>@dcxfg115</h3>
           </a>

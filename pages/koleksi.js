@@ -28,46 +28,46 @@ function Test() {
         <div className={`flex-[1_1_auto] flex flex-wrap`}>
             <div className={`${styles.column}`}>
                 <div className={`m-0.5 sm:m-2`}>
-                    <Image src={coll1} placeholder="blur" quality="100" layout="responsive"/>
+                    <Image src={coll1} placeholder="blur" alt="image" quality="100" layout="responsive"/>
                 </div>
                 <div className={`m-0.5 sm:m-2`}>
-                    <Image src={coll2} placeholder="blur" quality="100" layout="responsive"/>
-                </div>
-            </div>
-            <div className={`${styles.column}`}>
-                <div className={`m-0.5 sm:m-2`}>
-                    <Image src={coll5} placeholder="blur" quality="100" layout="responsive"/>
-                </div>
-                <div className={`m-0.5 sm:m-2`}>
-                    <Image src={coll6} placeholder="blur" quality="100" layout="responsive"/>
-                </div>
-                <div className={`m-0.5 sm:m-2`}>
-                    <Image src={coll7} placeholder="blur" quality="100" layout="responsive"/>
+                    <Image src={coll2} placeholder="blur" alt="image" quality="100" layout="responsive"/>
                 </div>
             </div>
             <div className={`${styles.column}`}>
                 <div className={`m-0.5 sm:m-2`}>
-                    <Image src={coll8} placeholder="blur" quality="100" layout="responsive"/>
+                    <Image src={coll5} placeholder="blur" alt="image" quality="100" layout="responsive"/>
                 </div>
                 <div className={`m-0.5 sm:m-2`}>
-                    <Image src={coll9} placeholder="blur" quality="100" layout="responsive"/>
+                    <Image src={coll6} placeholder="blur" alt="image" quality="100" layout="responsive"/>
                 </div>
                 <div className={`m-0.5 sm:m-2`}>
-                    <Image src={coll10} placeholder="blur" quality="100" layout="responsive"/>
+                    <Image src={coll7} placeholder="blur" alt="image" quality="100" layout="responsive"/>
                 </div>
             </div>
             <div className={`${styles.column}`}>
                 <div className={`m-0.5 sm:m-2`}>
-                    <Image src={coll11} placeholder="blur" quality="100" layout="responsive"/>
+                    <Image src={coll8} placeholder="blur" alt="image" quality="100" layout="responsive"/>
                 </div>
                 <div className={`m-0.5 sm:m-2`}>
-                    <Image src={coll12} placeholder="blur" quality="100" layout="responsive"/>
+                    <Image src={coll9} placeholder="blur" alt="image" quality="100" layout="responsive"/>
                 </div>
                 <div className={`m-0.5 sm:m-2`}>
-                    <Image src={coll13} placeholder="blur" quality="100" layout="responsive"/>
+                    <Image src={coll10} placeholder="blur" alt="image" quality="100" layout="responsive"/>
+                </div>
+            </div>
+            <div className={`${styles.column}`}>
+                <div className={`m-0.5 sm:m-2`}>
+                    <Image src={coll11} placeholder="blur" alt="image" quality="100" layout="responsive"/>
                 </div>
                 <div className={`m-0.5 sm:m-2`}>
-                    <Image src={coll3} placeholder="blur" quality="100" layout="responsive"/>
+                    <Image src={coll12} placeholder="blur" alt="image" quality="100" layout="responsive"/>
+                </div>
+                <div className={`m-0.5 sm:m-2`}>
+                    <Image src={coll13} placeholder="blur" alt="image" quality="100" layout="responsive"/>
+                </div>
+                <div className={`m-0.5 sm:m-2`}>
+                    <Image src={coll3} placeholder="blur" alt="image" quality="100" layout="responsive"/>
                 </div>
             </div>
         </div>
