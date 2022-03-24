@@ -20,20 +20,12 @@ import coll12 from '../public/drawings/coll12.jpg'
 import coll13 from '../public/drawings/coll13.jpg'
 
 export default function Collection() {
-    return (
-        <>
-            <Navbar/>
-
-            <Test/>
-
-            <Footer/>
-        </>
-    )
+    return <Test/>
 }
 
 function Test() {
     return (
-        <div className={`flex flex-wrap`}>
+        <div className={`flex-[1_1_auto] flex flex-wrap`}>
             <div className={`${styles.column}`}>
                 <div className={`m-0.5 sm:m-2`}>
                     <Image src={coll1} placeholder="blur" quality="100" layout="responsive"/>
