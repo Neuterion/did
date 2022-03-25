@@ -1,8 +1,5 @@
 import Image from 'next/image'
 
-import Navbar from '../components/navbar'
-import Footer from '../components/footer'
-
 import styles from '../styles/Collection.module.css'
 
 import coll1 from '../public/drawings/coll1.jpg'
