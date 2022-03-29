@@ -16,44 +16,44 @@ import coll13 from '../public/drawings/coll13.jpg'
 
 export default function Collection() {
     return (
-        <div className={`block columns-1 xsl:columns-2 sm:columns-3 lg:columns-5 max-w-[100vw] h-max m-4`}>
-            <div className="h-auto rounded-xl mb-4 break-inside-avoid-column">
+        <div id="koleksi" className={`block columns-1 xsl:columns-2 sm:columns-3 lg:columns-5 max-w-[100vw] h-max m-4`}>
+            <div className="h-auto mb-4 break-inside-avoid-column">
                 <Image src={coll1} placeholder="blur" alt="image" quality="100" layout="responsive"/>
             </div>
-            <div className="h-auto rounded-xl mb-4 break-inside-avoid-column">
+            <div className="h-auto mb-4 break-inside-avoid-column">
                 <Image src={coll2} placeholder="blur" alt="image" quality="100" layout="responsive"/>
             </div>
-            <div className="h-auto rounded-xl mb-4 break-inside-avoid-column">
+            <div className="h-auto mb-4 break-inside-avoid-column">
                 <Image src={coll3} placeholder="blur" alt="image" quality="100" layout="responsive"/>
             </div>
-            <div className="h-auto rounded-xl mb-4 break-inside-avoid-column">
+            <div className="h-auto mb-4 break-inside-avoid-column">
                 <Image src={coll4} placeholder="blur" alt="image" quality="100" layout="responsive"/>
             </div>
-            <div className="h-auto rounded-xl mb-4 break-inside-avoid-column">
+            <div className="h-auto mb-4 break-inside-avoid-column">
                 <Image src={coll5} placeholder="blur" alt="image" quality="100" layout="responsive"/>
             </div>
-            <div className="h-auto rounded-xl mb-4 break-inside-avoid-column">
+            <div className="h-auto mb-4 break-inside-avoid-column">
                 <Image src={coll6} placeholder="blur" alt="image" quality="100" layout="responsive"/>
             </div>
-            <div className="h-auto rounded-xl mb-4 break-inside-avoid-column">
+            <div className="h-auto mb-4 break-inside-avoid-column">
                 <Image src={coll7} placeholder="blur" alt="image" quality="100" layout="responsive"/>
             </div>
-            <div className="h-auto rounded-xl mb-4 break-inside-avoid-column">
+            <div className="h-auto mb-4 break-inside-avoid-column">
                 <Image src={coll8} placeholder="blur" alt="image" quality="100" layout="responsive"/>
             </div>
-            <div className="h-auto rounded-xl mb-4 break-inside-avoid-column">
+            <div className="h-auto mb-4 break-inside-avoid-column">
                 <Image src={coll9} placeholder="blur" alt="image" quality="100" layout="responsive"/>
             </div>
-            <div className="h-auto rounded-xl mb-4 break-inside-avoid-column">
+            <div className="h-auto mb-4 break-inside-avoid-column">
                 <Image src={coll10} placeholder="blur" alt="image" quality="100" layout="responsive"/>
             </div>
-            <div className="h-auto rounded-xl mb-4 break-inside-avoid-column">
+            <div className="h-auto mb-4 break-inside-avoid-column">
                 <Image src={coll11} placeholder="blur" alt="image" quality="100" layout="responsive"/>
             </div>
-            <div className="h-auto rounded-xl mb-4 break-inside-avoid-column">
+            <div className="h-auto mb-4 break-inside-avoid-column">
                 <Image src={coll12} placeholder="blur" alt="image" quality="100" layout="responsive"/>
             </div>
-            <div className="h-auto rounded-xl mb-4 break-inside-avoid-column">
+            <div className="h-auto mb-4 break-inside-avoid-column">
                 <Image src={coll13} placeholder="blur" alt="image" quality="100" layout="responsive"/>
             </div>
         </div>

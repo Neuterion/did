@@ -15,6 +15,15 @@ module.exports = {
         'xsl': {'raw': '(min-width: 260px) and (max-width: 639px)'},
         ...defaultTheme.screens,
       },
+      keyframes: {
+        'slide-up': {
+          '0%': {transform: 'translateY(50%)'},
+          '100%': {transform: 'translateY(0%)'}
+        },
+      },
+      animation: {
+        slide: '1s ease-in 0s 1 slide-up',
+      }
     },
   },
   variants: {},

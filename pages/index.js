@@ -1,23 +1,24 @@
-import Link from 'next/link'
-import Image from 'next/image'
+import { useInView } from 'react-intersection-observer'
 
-import Drawings from '../components/drawings'
+import Image from 'next/image'
 
 import title from '../public/logos/did-title2.png'
 
 export default function Home() {
-  return <Main/>
-}
+  const { ref, inView, entry } = useInView({
+    triggerOnce: true,
+  })
 
-function Main() {
   return (
-    <main className={`flex-[1_1_auto] flex flex-col font-[Jost,sans-serif] items-center text-white break-all`}>
-      <div className={`flex justify-center w-1/2 h-1/2 lg:w-[33%] lg:h-[33%] object-cover py-4`}>
-        <Image src={title} alt="Dreaming in Daylight" placeholder="blur"/>
+    <main className="flex-[1_1_auto] font-[Jost,sans-serif] items-center text-white break-all">
+      <div ref={ref} className={`flex flex-col items-center header_slide_in ${inView ? "appear" : ""}`}>
+        <div className="w-1/2 h-1/2 object-cover py-2">
+          <Image src={title} alt="Dreaming in Daylight" placeholder="blur"/>
+        </div>
+        <h4 className="w-[100%] max-w-[90ch] font-[Inter] text-xs xs:text-base xs:break-normal text-center">
+          Dimana kemampuan menggambar maupun fotografi menyatu dengan kemampuan berimajinasi.
+        </h4>        
       </div>
-      <h4 className={`text-md xs:break-normal px-8 sm:px-32 2xl:px-96 text-center`}>
-        Dimana kemampuan menggambar maupun fotografi menyatu dengan kemampuan berimajinasi.
-      </h4>
 
       <EventCards/>
 
@@ -26,10 +27,23 @@ function Main() {
 }
 
 function EventCards() {
+  const { ref: Drawry, inView: DrawryInView, entry: DrawryEntry } = useInView({
+    threshold: 1,
+    triggerOnce: true,
+  })
+  const { ref: Photo, inView: PhotoInView, entry: PhotoEntry } = useInView({
+    threshold: 1,
+    triggerOnce: true,
+  })
+  const { ref: Exhibition, inView: ExhibitionInView, entry: ExhibitionEntry } = useInView({
+    threshold: 1,
+    triggerOnce: true,
+  })
+
   return (
-    <section className="flex flex-col justify-center items-center xs:break-normal">
-      <div className={`w-11/12 rounded-xl px-7 py-6 my-4 sm:my-6 bg-gradient-to-tr from-[#0c1d58] to-[#6e4c68]`}>
-        <div className="xxs:border-r-2 pr-4 border-white">
+    <section id="index" className="flex flex-col justify-center items-center xs:break-normal">
+      <div ref={Drawry} className={`did_slide_in ${DrawryInView ? "appear" : ""} w-11/12 rounded-xl px-7 py-6 my-4 sm:my-6 bg-gradient-to-tr from-[#0c1d58] to-[#6e4c68]`}>
+        <div className="xxs:border-r-2 pr-4 lg:pr-6 border-white transition-[border] duration-[90ms] ease-linear hover:border-r-8">
           <h3 className={`font-[Jost,sans-serif] text-lg md:text-xl text-yellow-200`}>
             LOMBA
           </h3>
@@ -42,8 +56,8 @@ function EventCards() {
         </div>
       </div>
 
-      <div className={`w-11/12 rounded-xl px-7 py-6 my-4 sm:my-6 bg-gradient-to-tr from-[#2cb8b3] to-[#cc2dfd]`}>
-        <div className="xxs:border-r-2 pr-4 border-white">
+      <div ref={Photo} className={`did_slide_in ${PhotoInView ? "appear" : ""} w-11/12 rounded-xl px-7 py-6 my-4 sm:my-6 bg-gradient-to-tr from-[#2cb8b3] to-[#cc2dfd]`}>
+        <div className="xxs:border-r-2 pr-4 lg:pr-6 border-white transition-[border] duration-[90ms] ease-linear hover:border-r-8">
           <h3 className={`font-[Jost,sans-serif] text-lg md:text-xl text-yellow-200`}>
             LOMBA
           </h3>
@@ -56,8 +70,8 @@ function EventCards() {
         </div>
       </div>
 
-      <div className={`w-11/12 rounded-xl px-7 py-6 my-4 sm:my-6 bg-gradient-to-tr from-[#946466] to-[#f3d56c]`}>
-        <div className="xxs:border-r-2 pr-4 border-white">
+      <div ref={Exhibition} className={`did_slide_in ${ExhibitionInView ? "appear" : ""} w-11/12 rounded-xl px-7 py-6 my-4 sm:my-6 bg-gradient-to-tr from-[#946466] to-[#f3d56c]`}>
+        <div className="xxs:border-r-2 pr-4 lg:pr-6 border-white transition-[border] duration-[90ms] ease-linear hover:border-r-8">
           <h3 className={`font-[Jost,sans-serif] text-lg md:text-xl text-yellow-200`}>
             PAMERAN
           </h3>
