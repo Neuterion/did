@@ -8,11 +8,9 @@ export default function Navbar() {
                     <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
                 </svg>
             </a>
-            <Link href="/koleksi">
-                <a className="flex px-1 xs:px-3 py-1 2xl:py-2 mx-1 2xl:mx-2 text-[16vw] xxs:text-[9vw] xs:text-lg rounded-md hover:bg-blue-200 hover:bg-opacity-50 transition duration-150">
-                    Koleksi
-                </a>               
-            </Link>
+            <a href="/koleksi" className="flex px-1 xs:px-3 py-1 2xl:py-2 mx-1 2xl:mx-2 text-[16vw] xxs:text-[9vw] xs:text-lg rounded-md hover:bg-blue-200 hover:bg-opacity-50 transition duration-150">
+                Koleksi
+            </a>
         </nav>
     )
 }
