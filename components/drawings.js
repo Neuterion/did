@@ -7,13 +7,13 @@ export default function Drawings() {
     return (
         <div className="flex flex-wrap px-3 sm:space-x-3 justify-center">
             <div>
-                <Image src={Img1} placeholder="blur" quality="100"></Image>
+                <Image src={Img1} placeholder="blur" alt="image" quality="100"></Image>
             </div>
             <div className="hidden lg:flex">
-                <Image src={Img2} placeholder="blur" quality="100"></Image>
+                <Image src={Img2} placeholder="blur" alt="image" quality="100"></Image>
             </div>
             <div>
-                <Image src={Img3} placeholder="blur" quality="100"></Image>
+                <Image src={Img3} placeholder="blur" alt="image" quality="100"></Image>
             </div>
         </div>
     )
