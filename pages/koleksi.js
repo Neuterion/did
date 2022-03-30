@@ -20,17 +20,14 @@ export default function Collection() {
     const { ref: title, inView: titleInView, entry: titleEntry } = useInView({
       triggerOnce: true,
     })
-    const { ref: desc, inView: descInView, entry: descEntry } = useInView({
-        triggerOnce: true,
-    })
 
     return (
         <section>
-            <div className="m-4 sm:m-0 sm:mt-5 text-white text-center">
-                <h1 ref={title} className={`header_slide_in2 ${titleInView ? "appear" : ""} font-[Fraunces] text-3xl sm:text-4xl`}>
+            <div ref={title} className={`header_slide_in2 ${titleInView ? "appear" : ""} m-4 sm:m-0 sm:mt-5 text-white text-center`}>
+                <h1 className={`font-[Fraunces] text-3xl sm:text-4xl`}>
                     Koleksi Kami
                 </h1>
-                <h4 ref={desc} className={`header_slide_in2 ${descInView ? "appear" : ""} font-[Inter] text-xs sm:text-sm`}>
+                <h4 className={`font-[Inter] text-xs sm:text-sm`}>
                     Berisi gambar-gambar hasil imajinasi anggota-anggota Drawing Club di SMPN 115.
                 </h4>
             </div>
