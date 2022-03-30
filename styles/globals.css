@@ -65,6 +65,21 @@ body {
   }
 }
 
+.header_slide_in2.appear {
+  animation: cubic-bezier(.4, 0, .2, 1) 1s header-slide2;
+}
+
+@keyframes header-slide2 {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 90%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
 
 a {
   color: inherit;
