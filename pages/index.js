@@ -28,15 +28,15 @@ export default function Home() {
 
 function EventCards() {
   const { ref: Drawry, inView: DrawryInView, entry: DrawryEntry } = useInView({
-    threshold: 1,
+    threshold: 0.85,
     triggerOnce: true,
   })
   const { ref: Photo, inView: PhotoInView, entry: PhotoEntry } = useInView({
-    threshold: 1,
+    threshold: 0.85,
     triggerOnce: true,
   })
   const { ref: Exhibition, inView: ExhibitionInView, entry: ExhibitionEntry } = useInView({
-    threshold: 1,
+    threshold: 0.7,
     triggerOnce: true,
   })
 
