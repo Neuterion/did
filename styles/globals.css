@@ -29,10 +29,6 @@ body {
   flex-direction: column;
 }
 
-#index > div:hover > div {
-  border-right-width: 8px;
-}
-
 #koleksi img {
   border-radius: .3rem;
 }
