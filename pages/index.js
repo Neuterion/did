@@ -14,7 +14,7 @@ export default function Home() {
       <div className="flex flex-col items-center justify-center">
         <div ref={ref} className={`flex flex-col items-center header_slide_in ${inView ? "appear" : ""}`}>
           <div className="flex flex-col items-center w-1/2 h-1/2 object-cover py-2">
-            <Image src={title} alt="Dreaming in Daylight" placeholder="blur"/>
+            <Image src={title} alt="Dreaming in Daylight"/>
           </div>
           <h4 className="w-[100%] max-w-[90ch] font-[Inter] text-xs xs:text-base xs:break-normal text-center">
             Dimana kemampuan menggambar maupun fotografi menyatu dengan kemampuan berimajinasi.
