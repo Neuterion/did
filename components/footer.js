@@ -13,13 +13,18 @@ export default function Footer() {
           <Image src={trimegah} alt="Trimegah"/>
         </a> 
       </div>
-      <div className="flex justify-center items-center w-full pt-4 border-t border-t-[#e5e5e6]">
-        <a className="px-1" href="https://www.instagram.com/dcxfg115/" target="_blank" rel="noreferrer">
-          <i className="fa-brands fa-instagram fa-2x"></i>
+      <div className="flex justify-between items-center w-full pt-4 px-6 border-t border-t-[#e5e5e6]">
+        <a href="//www.dmca.com/Protection/Status.aspx?ID=8222e33b-20dc-44f3-a879-96b8dd0b5438" title="DMCA.com Protection Status" className="dmca-badge">
+          <img src="https://images.dmca.com/Badges/dmca-badge-w100-5x1-08.png?ID=8222e33b-20dc-44f3-a879-96b8dd0b5438" alt="DMCA.com Protection Status"/>
         </a>
-        <button className="px-1" onClick={() => alert("Hubungi kami: drawingclubjkt115@gmail.com")}>
-          <i className="fa-regular fa-envelope fa-2x"></i>
-        </button>
+        <div className="flex justify-center">
+          <a className="mx-2" href="https://www.instagram.com/dcxfg115/" target="_blank" rel="noreferrer">
+            <i className="fa-brands fa-instagram fa-2x"></i>
+          </a>
+          <button className="mx-2" onClick={() => alert("Hubungi kami: drawingclubjkt115@gmail.com")}>
+            <i className="fa-regular fa-envelope fa-2x"></i>
+          </button>          
+        </div>
       </div>
     </footer>
   )

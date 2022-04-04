@@ -13,6 +13,7 @@ function MyApp({ Component, pageProps }) {
           <title>Dreaming in Daylight</title>
         </Head>
         <Layout>
+          <Script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"/>
           <Script src="https://kit.fontawesome.com/4ee6c4a9a2.js" crossOrigin="anonymous"/>
           <Component {...pageProps} />
         </Layout>
