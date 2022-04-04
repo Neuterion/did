@@ -15,10 +15,10 @@ export default function Footer() {
       </div>
       <div className="flex justify-center items-center w-full pt-4 border-t border-t-[#e5e5e6]">
         <a className="px-1" href="https://www.instagram.com/dcxfg115/" target="_blank" rel="noreferrer">
-          <i class="fa-brands fa-instagram fa-2x"></i>
+          <i className="fa-brands fa-instagram fa-2x"></i>
         </a>
         <button className="px-1" onClick={() => alert("Hubungi kami: drawingclubjkt115@gmail.com")}>
-          <i class="fa-regular fa-envelope fa-2x"></i>
+          <i className="fa-regular fa-envelope fa-2x"></i>
         </button>
       </div>
     </footer>

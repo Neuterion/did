@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Layout from '../components/layout'
+import Script from 'next/script'
 
 import '../styles/globals.css'
 
@@ -12,6 +13,7 @@ function MyApp({ Component, pageProps }) {
           <title>Dreaming in Daylight</title>
         </Head>
         <Layout>
+          <Script src="https://kit.fontawesome.com/4ee6c4a9a2.js" crossOrigin="anonymous"/>
           <Component {...pageProps} />
         </Layout>
       </>
