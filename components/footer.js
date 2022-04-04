@@ -1,27 +1,26 @@
 import Image from 'next/image'
 
-import instagram from '../public/logos/instagram.png'
-import gmail from '../public/logos/gmail.png'
+import trimegah from '../public/logos/trimegah.jpg'
 
 export default function Footer() {
-    return (
-      <div className="flex-[0_1_auto] w-11/12 mx-auto break-all xs:break-normal">
-        <footer className={`flex flex-col md:flex-row py-3 space-y-2 md:space-y-0 justify-center items-center font-[Inter] text-white border-t border-opacity-50 border-t-gray-100`}>
-          <h3 className={`mx-2 text-xs xxs:text-sm sm:text-base`}>
-            Hubungi kami:
-          </h3>
-          <a href="https://www.instagram.com/dcxfg115/" target="_blank" rel="noreferrer" className={`py-2 px-3 mx-2 flex justify-center items-center rounded-lg bg-gray-900 hover:bg-black transition duration-150`}>
-            <Image src={instagram} width="20%" height="20%" alt="Instagram"></Image>
-            <h3 className={`px-2 text-xs xxs:text-sm sm:text-base`}>@dcxfg115</h3>
-          </a>
-          <a className={`py-2 px-3 mx-2 flex justify-center items-center rounded-lg bg-gray-900 hover:bg-black transition duration-150`}>
-            <Image src={gmail} width="20%" height="15%" alt="G-Mail"></Image>
-            <h3 className={`px-2 text-xs xxs:text-sm sm:text-base`}>
-              drawingclubjkt115<br className="hidden xsl:block sm:hidden"/>@gmail.com
-            </h3>
-          </a>
-        </footer>        
+  return (
+    <footer className={`flex-[0_1_auto] flex flex-col pb-3 mt-6 space-y-2 md:space-y-0 break-all xs:break-normal rounded-xl bg-white justify-between items-center font-[Inter] text-black`}>
+      <div className="flex flex-col items-center w-full pt-4  ">
+        <h1 className="text-xl">
+          Disponsori oleh
+        </h1>
+        <a href="https://www.trimegah.com/id" target="_blank" rel="noreferrer">
+          <Image src={trimegah} alt="Trimegah"/>
+        </a> 
       </div>
-
-    )
+      <div className="flex justify-center items-center w-full pt-4 border-t border-t-[#e5e5e6]">
+        <a className="px-1" href="https://www.instagram.com/dcxfg115/" target="_blank" rel="noreferrer">
+          <i class="fa-brands fa-instagram fa-2x"></i>
+        </a>
+        <button className="px-1" onClick={() => alert("Hubungi kami: drawingclubjkt115@gmail.com")}>
+          <i class="fa-regular fa-envelope fa-2x"></i>
+        </button>
+      </div>
+    </footer>
+  )
   }
