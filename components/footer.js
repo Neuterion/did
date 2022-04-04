@@ -4,9 +4,9 @@ import trimegah from '../public/logos/trimegah.jpg'
 
 export default function Footer() {
   return (
-    <footer className={`flex-[0_1_auto] flex flex-col pb-3 mt-6 space-y-2 md:space-y-0 break-all xs:break-normal rounded-xl bg-white justify-between items-center font-[Inter] text-black`}>
-      <div className="flex flex-col items-center w-full pt-4  ">
-        <h1 className="text-xl">
+    <footer className={`flex-[0_1_auto] flex flex-col pb-3 mt-6 space-y-2 md:space-y-0 break-all xs:break-normal [border-radius:0.75rem_0.75rem_0_0] bg-white justify-between items-center font-[Inter] text-black`}>
+      <div className="flex flex-col items-center w-full pt-4">
+        <h1 className="xs:text-xl">
           Disponsori oleh
         </h1>
         <a href="https://www.trimegah.com/id" target="_blank" rel="noreferrer">
