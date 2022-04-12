@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import trimegah from '../public/logos/trimegah.jpg'
+import trimegah from '../public/logos/test.jpg'
 
 export default function Footer() {
   return (

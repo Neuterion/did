@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'jost': 'Jost, sans-serif',
+        'fraunces': 'Fraunces, serif',
+      },
       screens: {
         'xxs': '100px',
         /* xs -- used when it is the max breakpoint to which an element should be altered it's behaviour */
@@ -15,15 +19,6 @@ module.exports = {
         'xsl': {'raw': '(min-width: 260px) and (max-width: 639px)'},
         ...defaultTheme.screens,
       },
-      keyframes: {
-        'slide-up': {
-          '0%': {transform: 'translateY(50%)'},
-          '100%': {transform: 'translateY(0%)'}
-        },
-      },
-      animation: {
-        slide: '1s ease-in 0s 1 slide-up',
-      }
     },
   },
   variants: {},

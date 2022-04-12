@@ -3,7 +3,7 @@ import LazyImage from 'react-lazy-blur-image'
 
 export default function Collection({posts}) {
   return (
-    <section id="__koleksi" className="flex-[1_1_auto]">
+    <section id="__koleksi" className="flex-auto">
       <div className={`m-4 sm:m-0 sm:mt-5 text-white text-center`}>
         <h1 className={`font-[Fraunces] text-3xl sm:text-4xl`}>
             Koleksi Kami

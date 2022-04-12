@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 export default function Navbar() {
     return (
         <nav className={`flex-[0_1_auto] flex flex-col xs:flex-row justify-center items-center xxs:px-1 xs:px-3 xxs:py-2 font-[Jost,sans-serif] text-lg 2xl:text-xl text-white bg-transparent`}>

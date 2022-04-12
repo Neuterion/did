@@ -5,7 +5,9 @@ export default function Layout({ children }) {
     return (
         <>
             <Navbar/>
-            {children}
+            <div className="flex-auto flex justify-center items-center">
+                {children}
+            </div>
             <Footer/>
         </>
     )
