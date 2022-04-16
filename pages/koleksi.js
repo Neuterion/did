@@ -1,5 +1,8 @@
+import React from 'react'
 import { prisma } from '../lib/prisma'
 import Link from 'next/link'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
 
 export default function Collection({ posts }) {
   return (
@@ -17,7 +20,7 @@ export default function Collection({ posts }) {
           return (
             <div key={post.id.toString()} className="h-auto mb-4 break-inside-avoid-column">
               <Link href={`/karya/${encodeURIComponent(post.id)}`} passHref>
-                <img src={post.photo} alt={post.title}/>
+                <LazyLoadImage src={post.photo} alt={post.title} effect="blur" className="cursor-grab" />
               </Link>
             </div>
           )
