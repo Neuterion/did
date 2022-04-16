@@ -69,65 +69,17 @@ a {
   }
 }
 
-#posts img {
-  border-radius: .3rem;
-  cursor: pointer;
+.header_slide_in.fade {
+  animation: cubic-bezier(.4, 0, .2, 1) 1s header-fade;
 }
 
-#__post {
-  display: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 9999;
-}
-
-#__post > main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #000000b6;
-}
-
-#post > main > div:first-child {
-  position: absolute;
-  top: 5;
-  left: 5;
-}
-
-#post > main > div:last-child {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 95ch;
-  color: white;
-  text-align: center;
-}
-
-#post > main > div:last-child > h1 {
-  font-size: 3.75rem;
-  line-height: 1;
-  font-family: Fraunces, serif;
-  font-weight: 700;
-}
-
-#post > main > div:last-child > h3 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-family: Jost, sans-serif;
-}
-
-#post > main > div:last-child > p {
-  padding-top: .5rem;
-  padding-bottom: .5rem;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  font: Inter;
+@keyframes header-fade {
+  0% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0, 20%, 0);
+  }
 }

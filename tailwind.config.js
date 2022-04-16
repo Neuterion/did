@@ -10,6 +10,7 @@ module.exports = {
       fontFamily: {
         'jost': 'Jost, sans-serif',
         'fraunces': 'Fraunces, serif',
+        'inter': 'Inter, sans-serif',
       },
       screens: {
         'xxs': '100px',

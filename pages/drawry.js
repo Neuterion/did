@@ -6,11 +6,8 @@ export default function Collection({ posts }) {
     <section id="__koleksi" className="flex-auto">
       <div className={`m-4 sm:m-0 sm:mt-5 text-white text-center`}>
         <h1 className={`font-fraunces text-3xl sm:text-4xl`}>
-            Koleksi Kami
+            Draw From A Story
         </h1>
-        <h4 className={`font-inter text-xs sm:text-sm`}>
-            Berisi gambar-gambar hasil imajinasi anggota-anggota Drawing Club di SMPN 115.
-        </h4>
       </div>
       <div id="posts" className={`block columns-1 xsl:columns-2 sm:columns-3 lg:columns-5 max-w-[100vw] h-max m-4`}>
         {posts.map((post) => {
@@ -30,7 +27,7 @@ export default function Collection({ posts }) {
 export async function getStaticProps() {
   const posts = await prisma.post.findMany({
     where: {
-      eventId: 0,
+      eventId: 1,
     }
   })
   return {
