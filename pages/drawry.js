@@ -17,10 +17,10 @@ export default function Collection({ posts, topPosts }) {
             Draw From A Story
         </h1>
         <p className="px-2 font-jost">
-          Pencet gambar untuk membuka deskripsinya.
+          Klik gambar untuk membuka deskripsinya.
         </p>
       </div>
-      <div id="top-posts" className={`grid items-center justify-items-center gap-4 m-4 grid-cols-1`}>
+      <div id="top-posts" className={`grid items-center justify-items-center gap-4 m-4 grid-cols-1 md:grid-cols-2`}>
         {topPosts.map((post) => {
           let trophyCol
           let borderCol
@@ -44,7 +44,7 @@ export default function Collection({ posts, topPosts }) {
           )
         })}
         <style jsx>{`
-          @media (min-width: 640px) {  
+          @media (min-width: 1024px) {  
             #top-posts {
               grid-template-columns: repeat(${colCount}, minmax(0, 1fr));
             }

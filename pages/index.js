@@ -45,9 +45,9 @@ function EventCards() {
   })
 
   return (
-    <section id="cards" className="grid justify-items-center gap-8 mt-8 grid-cols-3 grid-rows-[(minmax(200px,240px))] px-8 xs:break-normal text-white">
+    <section id="cards" className="grid justify-items-center gap-8 mt-8 grid-cols-1 md:grid-cols-3 grid-rows-[(minmax(200px,240px))] px-8 xs:break-normal text-white">
       {/* draw from a story */}
-      <div ref={Drawry} className={`flex did_slide_in ${DrawryInView ? "appear" : ""} rounded-lg bg-gradient-to-tr from-[#42275a] to-[#734b6d]`}>
+      <div ref={Drawry} className={`flex w-full did_slide_in ${DrawryInView ? "appear" : ""} rounded-lg bg-gradient-to-tr from-[#42275a] to-[#734b6d]`}>
         <div className="flex-auto flex flex-col justify-center items-center px-3 pt-1 pb-3 text-center">
           <div className="w-fit p-3">
             <i className="fa-solid fa-palette fa-2xl"></i>
@@ -67,7 +67,7 @@ function EventCards() {
       </div>
 
       {/* insight in photogyart */}
-      <div ref={Photo} className={`flex did_slide_in ${PhotoInView ? "appear" : ""} rounded-lg bg-gradient-to-tr from-[#61045f] to-[#aa076b]`}>
+      <div ref={Photo} className={`flex w-full did_slide_in ${PhotoInView ? "appear" : ""} rounded-lg bg-gradient-to-tr from-[#61045f] to-[#aa076b]`}>
         <div className="flex-auto flex flex-col justify-center items-center px-3 pt-1 pb-3 text-center">
           <div className="w-fit p-3">
             <i className="fa-solid fa-camera-retro fa-2xl"></i>
@@ -87,7 +87,7 @@ function EventCards() {
       </div>
 
       {/* our collection */}
-      <div ref={Koleksi} className={`flex did_slide_in ${KoleksiInView ? "appear" : ""} rounded-lg bg-gradient-to-tr from-[#0c094b] to-[#599ae6]`}>
+      <div ref={Koleksi} className={`flex w-full did_slide_in ${KoleksiInView ? "appear" : ""} rounded-lg bg-gradient-to-tr from-[#0c094b] to-[#599ae6]`}>
         <div className="flex-auto flex flex-col justify-center items-center px-3 pt-1 pb-3 text-center">
           <div className="w-fit p-3">
             <i className="fa-solid fa-images fa-2xl"></i>

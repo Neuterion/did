@@ -17,10 +17,10 @@ export default function Post({ post }) {
             <h3 className="text-xl sm:text-2xl font-jost mb-3">
               - {post.author.name}
             </h3>
-            <pre className="relative p-4 border-2 border-[#fef08ac6] rounded-bl-lg rounded-tr-lg whitespace-pre-line text-sm sm:text-base text-center font-inter">
+            <pre className={`relative p-4 ${post.desc !== '' && "border-2"} border-[#fef08ac6] rounded-bl-lg rounded-tr-lg whitespace-pre-line text-sm sm:text-base text-center font-inter`}>
               {post.desc !== "" && eval('`'+post.desc+'`')}
-              <i className="absolute -top-5 -left-5 fa-solid fa-3x fa-quote-left"></i>
-              <i className="absolute -bottom-5 -right-5 fa-solid fa-3x fa-quote-right"></i>
+              {post.desc !== "" && <i className="absolute -top-5 -left-5 fa-solid fa-3x fa-quote-left"/>}
+              {post.desc !== "" && <i className="absolute -bottom-5 -right-5 fa-solid fa-3x fa-quote-right"/>}
             </pre>
           </div>
           <img src={post.photo || null} alt={post.title} className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 max-h-[80vh] opacity-0 transition-opacity duration-300 select-none [-webkit-user-drag:none]"/>
