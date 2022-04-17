@@ -45,21 +45,21 @@ function EventCards() {
   })
 
   return (
-    <section id="cards" className="grid justify-items-center gap-8 mt-8 grid-cols-[repeat(auto-fill,minmax(240px,1fr))] grid-rows-[(minmax(200px,240px))] px-8 xs:break-normal text-white">
+    <section id="cards" className="grid justify-items-center gap-8 mt-8 grid-cols-3 grid-rows-[(minmax(200px,240px))] px-8 xs:break-normal text-white">
       {/* draw from a story */}
       <div ref={Drawry} className={`flex did_slide_in ${DrawryInView ? "appear" : ""} rounded-lg bg-gradient-to-tr from-[#42275a] to-[#734b6d]`}>
         <div className="flex-auto flex flex-col justify-center items-center px-3 pt-1 pb-3 text-center">
           <div className="w-fit p-3">
             <i className="fa-solid fa-palette fa-2xl"></i>
           </div>
-          <h1 className="flex justify-center items-center font-fraunces text-4xl font-bold">
+          <h1 className="font-fraunces text-4xl font-bold">
             Draw From A Story
           </h1>
-          <p className="flex items-center px-2 pt-1 font-jost">
+          <p className="px-2 pt-1 font-jost">
             Gambar apa yang kamu imajinasikan saat membaca buku, sastra atau mendengarkan lagu!
           </p>
           <Link href="/drawry" passHref>
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 mt-2 hover:text-yellow-300 transition duration-75" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 mt-2 hover:text-yellow-300 hover:cursor-pointer transition duration-75" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </Link>
@@ -72,14 +72,14 @@ function EventCards() {
           <div className="w-fit p-3">
             <i className="fa-solid fa-camera-retro fa-2xl"></i>
           </div>
-          <h1 className="flex justify-center items-center font-fraunces text-4xl font-bold">
+          <h1 className="font-fraunces text-4xl font-bold">
             Insight In Photogyart
           </h1>
-          <p className="flex items-center px-2 pt-1 font-jost">
-            Ambil sebuah foto lalu deskripsikan apa yang kamu imajinasikan dalam (mengambil/melihat) foto tersebut!
+          <p className="px-2 pt-1 font-jost">
+            Ambil sebuah foto yang bertemakan <span className="inline-block italic text-yellow-400">golden hour</span> lalu deskripsikan apa yang kamu imajinasikan dalam (mengambil/melihat) foto tersebut!
           </p>
           <Link href="/photogyart" passHref>
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 mt-2 hover:text-yellow-300 transition duration-75" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 mt-2 hover:text-yellow-300 hover:cursor-pointer transition duration-75" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </Link>
@@ -99,7 +99,7 @@ function EventCards() {
             Berisi gambar-gambar hasil imajinasi anggota-anggota Drawing Club di SMPN 115.
           </p>
           <Link href="/koleksi" passHref>
-            <svg xmlns="http://www.w3.org/2000/svg" role="button" className="h-8 w-8 mt-2 hover:text-yellow-300 transition duration-75" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <svg xmlns="http://www.w3.org/2000/svg" role="button" className="h-8 w-8 mt-2 hover:text-yellow-300 hover:cursor-pointer transition duration-75" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </Link>

@@ -18,10 +18,9 @@ export default function Footer() {
 
       {/* social media */}
       <div className="flex flex-col-reverse xs:flex-row justify-between items-center w-full pt-4 px-6 border-t border-t-[#e5e5e6]">
-        {/* DMCA */}
-        <a href="//www.dmca.com/Protection/Status.aspx?ID=8222e33b-20dc-44f3-a879-96b8dd0b5438" title="DMCA.com Protection Status" className="dmca-badge mt-2 xs:mt-0">
-          <img src="https://images.dmca.com/Badges/dmca-badge-w100-5x1-08.png?ID=8222e33b-20dc-44f3-a879-96b8dd0b5438" alt="DMCA.com Protection Status"/>
-        </a>
+        <p className="text-sm font-inter">
+          Made with ❤️ by Farzan Akhtar
+        </p>
         <div className="flex justify-center">
           {/* Instagram */}
           <a className="mx-2" href="https://www.instagram.com/dcxfg115/" target="_blank" rel="noreferrer">
