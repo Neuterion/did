@@ -17,7 +17,7 @@ export default function Post({ post }) {
             <h3 className="text-xl sm:text-2xl font-jost mb-3">
               - {post.author.name}
             </h3>
-            <pre className={`relative p-4 ${post.desc !== '' && "border-2"} border-[#fef08ac6] rounded-bl-lg rounded-tr-lg whitespace-pre-line text-sm sm:text-base text-center font-inter`}>
+            <pre className={`relative p-4 ${post.desc !== '' && "border-2"} ${rotate ? "select-none" : ""} border-[#fef08ac6] rounded-bl-lg rounded-tr-lg whitespace-pre-line text-sm sm:text-base text-center font-inter`}>
               {post.desc !== "" && eval('`'+post.desc+'`')}
               {post.desc !== "" && <i className="absolute -top-5 -left-5 fa-solid fa-3x fa-quote-left"/>}
               {post.desc !== "" && <i className="absolute -bottom-5 -right-5 fa-solid fa-3x fa-quote-right"/>}
